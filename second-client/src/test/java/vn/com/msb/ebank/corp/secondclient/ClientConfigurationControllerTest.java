@@ -1,4 +1,4 @@
-package com.sergiomartinrubio.clientconfigurationapp;
+package vn.com.msb.ebank.corp.secondclient;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -30,4 +30,5 @@ class ClientConfigurationControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("username - password")));
     }
+
 }

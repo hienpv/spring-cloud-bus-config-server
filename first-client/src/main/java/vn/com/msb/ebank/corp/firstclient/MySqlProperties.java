@@ -1,4 +1,4 @@
-package com.sergiomartinrubio.secondclient;
+package vn.com.msb.ebank.corp.firstclient;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -10,5 +10,4 @@ public class MySqlProperties {
     private String url;
     private String username;
     private String password;
-
 }

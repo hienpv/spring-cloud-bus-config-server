@@ -1,4 +1,4 @@
-package com.sergiomartinrubio.secondclient;
+package vn.com.msb.ebank.corp.secondclient;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.SpringApplication;
@@ -28,6 +28,6 @@ class ClientConfigurationController {
 
     @GetMapping
     public String getProperty() {
-        return mySqlProperties.getUsername() + " - " + mySqlProperties.getPassword();
+        return mySqlProperties.getUsername() + " - " + mySqlProperties.getUrl();
     }
 }

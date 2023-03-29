@@ -1,4 +1,4 @@
-package com.sergiomartinrubio.clientconfigurationapp;
+package vn.com.msb.ebank.corp.secondclient;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

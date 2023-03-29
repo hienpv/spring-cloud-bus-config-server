@@ -1,4 +1,4 @@
-package com.smartinrubio.springconfigserver;
+package vn.com.msb.ebank.corp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
