@@ -9,9 +9,6 @@ server:
 spring:
   application:
     name: first-client
-  #  cloud:
-  #    config:
-  #      uri: http://localhost:8888
   profiles:
     active: development
   config:
@@ -19,5 +16,6 @@ spring:
   cloud:
     config:
       profile: development
+      label: dev
     bus:
       destination: myTopic

@@ -1,18 +1,32 @@
 server:
   port: 8888
 spring:
+  profiles:
+    active: jdbc
+  datasource:
+    url: jdbc:mysql://localhost:3307/configserver
+    username: root
+    password: secret
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 10
   application:
     name: config-server
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/hienpv/spring-cloud-bus-config-server.git
-          search-paths: config-properties
+        jdbc:
+          sql: SELECT CODE, VALUE from APP_CONFIG where APPLICATION=? and PROFILE=? and LABEL=?
+        order: 1
+#        git:
+#          uri: https://github.com/hienpv/spring-cloud-bus-config-server.git
+#          search-paths: config-properties
     bus:
       enabled: true
       id: config-server
       destination: myTopic
+      trace:
+        enabled: true
     server:
       encrypt:
         enabled: true
