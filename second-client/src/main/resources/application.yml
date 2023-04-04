@@ -15,7 +15,15 @@ spring:
     import: optional:configserver:http://localhost:8888
   cloud:
     config:
+#      uri: http://localhost:8888
       profile: development
       label: dev
     bus:
-      destination: myTopic
+      enabled: true
+      trace:
+        enabled: true
+      ack:
+        enabled: true
+      refresh:
+        enabled: true
+#      destination: myTopic

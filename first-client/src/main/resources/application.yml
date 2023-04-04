@@ -18,4 +18,13 @@ spring:
       profile: development
       label: dev
     bus:
-      destination: myTopic
+      id: first-client
+      enabled: true
+      trace:
+        enabled: true
+      ack:
+        enabled: true
+      refresh:
+        enabled: true
+#      destination: myTopic
+
