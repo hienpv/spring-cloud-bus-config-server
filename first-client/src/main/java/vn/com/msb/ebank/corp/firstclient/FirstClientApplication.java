@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableConfigurationProperties(value = MySqlProperties.class)
 public class FirstClientApplication {
 
+
     public static void main(String[] args) {
         SpringApplication.run(FirstClientApplication.class, args);
     }
@@ -26,6 +27,6 @@ class ClientConfigurationController {
 
     @GetMapping
     public String getProperty() {
-        return mySqlProperties.getUsername() + " - " + mySqlProperties.getUrl();
+        return mySqlProperties.getUsername() + " - " + mySqlProperties.getPassword();
     }
 }

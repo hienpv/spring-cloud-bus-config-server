@@ -7,4 +7,5 @@
 #    password: guest
 spring:
   kafka:
-    bootstrap-servers: http://localhost:9092
+#    bootstrap-servers: 10.1.66.33:9092
+    bootstrap-servers: 10.1.66.33:9092

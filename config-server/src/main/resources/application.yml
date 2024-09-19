@@ -9,6 +9,7 @@ spring:
   profiles:
     active: jdbc
   datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3307/configserver
     username: root
     password: secret
@@ -17,6 +18,9 @@ spring:
       maximum-pool-size: 10
   application:
     name: config-server
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/changelog-master.xml
   cloud:
     config:
       server:
